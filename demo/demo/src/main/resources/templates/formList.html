@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Form List</title>
+</head>
+<body>
+    <h1>Application Form</h1>
+
+    <form th:action="@{/formlist}" th:object="${formData}" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" th:field="*{name}" id="name" required/>
+        </div>
+        <div>
+            <label for="uen">UEN:</label>
+            <input type="text" th:field="*{uen}" id="uen" required/>
+        </div>
+        <div>
+            <label for="typeOfApplication">Type of Application:</label>
+            <input type="text" th:field="*{typeOfApplication}" id="typeOfApplication" required/>
+        </div>
+        <div>
+            <label for="dateOfApplication">Date of Application:</label>
+            <input type="date" th:field="*{dateOfApplication}" id="dateOfApplication" required/>
+        </div>
+        <div>
+            <label for="activities">Activities:</label>
+            <textarea th:field="*{activities}" id="activities" required></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <div th:if="${formData != null}">
+        <h2>Submitted Information:</h2>
+        <p>Name: <span th:text="${formData.name}"></span></p>
+        <p>UEN: <span th:text="${formData.uen}"></span></p>
+        <p>Type of Application: <span th:text="${formData.typeOfApplication}"></span></p>
+        <p>Date of Application: <span th:text="${formData.dateOfApplication}"></span></p>
+        <p>Activities: <span th:text="${formData.activities}"></span></p>
+    </div>
+</body>
+</html>
