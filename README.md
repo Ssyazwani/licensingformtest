@@ -1,14 +1,11 @@
-Objective: for people to input valid data so the information would be accurate
 
-Issues: the info given and written might not be in the correct format,  hence manual work is needed to filled in details from the form to the
-         database
+### Descriptions : 
+To be smooth the editing process for application/applicant's details
+<br>*work in progress*</br>
 
-         
+## Why considered to do this:
+<br>Admin team has difficulty in helping to edit and process the information given : some reasons are like info given and written might not be in the correct format, applicants only filling in details so the Admin team would need to liase with OIC and OIC has to liase with applicant to find out what they want to edit</br>
 
-Using Springboot Java for this
-fully using Validation functions for Springboot -> minimising the errors
-
-Required : saving data inputted in excel 
-           saving changes/edit as well
-
-           
+## Further Rec
+<br> Required : </br>
+1. Saving info to excel or database
