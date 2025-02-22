@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1> Hello !</h1>
+    <title>Licensing Application</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Please fill in the particulars below</h1>
+        
+     
+        <form method="POST" th:action="@{/formTest}" th:object="${app}">
+            
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" th:field="*{name}" />
+                <div class="alert alert-danger" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+            </div>
+
+         
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" th:field="*{email}" />
+                <div class="alert alert-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+            </div>
+
+          
+            <div class="mb-3">
+                <label for="phoneNumber" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" name="phoneNumber" th:field="*{phoneNumber}" />
+                <div class="alert alert-danger" th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></div>
+            </div>
+
+          
+            <button type="submit">Submit</button>
+        </form>
+
+        <div th:if="${generatedId != null}">
+            <p>Generated ID: <span th:text="${generatedId}"></span></p>
+        </div>
+    </div>
 </body>
 </html>
