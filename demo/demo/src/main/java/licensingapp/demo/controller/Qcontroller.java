@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import licensingapp.demo.model.FormData;
 
 @Controller
-@RequestMapping("/formlist")
+@RequestMapping("/formData")
 public class Qcontroller {
 
     @GetMapping
@@ -17,13 +17,13 @@ public class Qcontroller {
         FormData formData = new FormData();
         model.addAttribute("formData", formData);  
 
-        return "formList"; 
+        return "formData"; 
     }
 
     @PostMapping
     public String submitForm(FormData formData, Model model) {
         model.addAttribute("formData", formData);
-        return "formList";  
+        return "formData";  
     }
 }
 
