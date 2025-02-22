@@ -26,10 +26,10 @@ import lombok.NoArgsConstructor;
 public class app {
 
     @NotEmpty (message = "mandatory")
-    @Size(min=3 , max = 64 , message = "First Name must be in between 3 to 64 characters")
+    @Size(min=3 , max = 64 , message = "Please insert Name of Company")
     private String name;
 
-    @Email(message= "Invalid email format yo yo")
+    @Email(message= "Invalid email format")
     @NotBlank(message="Please fill it in") //if u leave blank, it is an optional field
     private String email;
 
@@ -37,26 +37,20 @@ public class app {
     @Pattern(regexp = "\\d{8}", message =" please type 8 numbers")
     private String phoneNumber;
 
-    //(min = 10, max = 100)
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @Past(message ="Birth date must be past date")
-    private Date dateOfBirth;
+    private String Licensingid;
 
-    private String id;
-
-    public app(String name, String email, String phoneNumber, Date dateOfBirth) {
+    public app(String name, String email, String phoneNumber) {
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.dateOfBirth = dateOfBirth;
-        //this.id = Idgenerator.generateUniqueId();
+        //this.Licensingid = Idgenerator.generateUniqueId();
     }
 
-    // public static Contact fromString(String line) {
+    // public static app fromString(String line) {
     //     return null;
     // }   
 
-    // public boolean Agelimit( LocalDate dateOfBirth , LocalDate currTime  ) { // put in controller
+    // public boolean Agelimit( LocalDate dateOfBirth , LocalDate currTime  ) { 
     //     int age = Period.between(currTime, dateOfBirth).getYears();
     //     if (age> 10 && age <100);
     //     return true;
