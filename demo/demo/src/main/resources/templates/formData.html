@@ -6,7 +6,7 @@
 <body>
     <h1>Application Form</h1>
 
-    <form th:action="@{/formlist}" th:object="${formData}" method="post">
+    <form th:action="@{/formData}" th:object="${formData}" method="post">
         <div>
             <label for="name">Name:</label>
             <input type="text" th:field="*{name}" id="name" required/>
