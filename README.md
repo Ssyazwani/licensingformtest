@@ -1,6 +1,8 @@
 
 ## Description : 
-To be smooth the editing process for businesses's details
+To be smooth the editing process for businesses's details by 
+1. Having validations in editing fields
+2. Editing History (so able to track back what is being edited)
 <br>*work in progress*</br>
 
 ## Objective:
