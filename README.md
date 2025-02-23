@@ -1,10 +1,11 @@
 
 ### Description : 
-To be smooth the editing process for application/applicant's details
+To be smooth the editing process for businesses's details
 <br>*work in progress*</br>
 
-## Why considered to do this:
-Admin team has difficulty in helping to edit and process the information given : some reasons are like info given and written might not be in the correct format, applicants only filling in details so the Admin team would need to liase with OIC and OIC has to liase with applicant to find out what they want to edit
+## Objective:
+There is difficulty in editing and processing the information given : some reasons are like info given and written might not be in the correct format, applicants writing paragraphs or the need to do double work just confirm and check;
+having fields that required for them to fill in would be alot easier (alot of fields are required)
 
 ## Further Rec
-1. Saving info to excel or database
+1. Saving info to excel or having a database
