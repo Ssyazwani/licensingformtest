@@ -1,5 +1,5 @@
 
-### Description : 
+## Description : 
 To be smooth the editing process for businesses's details
 <br>*work in progress*</br>
 
